@@ -3,6 +3,6 @@
 (klog 'info "888888")
 (klog--debug "xxx66")
 (klog--info "99999999")
-(klog--info "xxxxxx")
+(klog--info "xxxxxx11")
 
-;(klog--log-open-log)
+(klog--log-open-log)
