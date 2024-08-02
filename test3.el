@@ -1,0 +1,26 @@
+(defun test3 ()
+  (setq i 0)
+  (setq j 0)
+  (setq m 0)
+  (setq n 0)
+  (setq x 0)
+  (message "===================%s=================="
+           (current-time-string))
+  (let ((i 1))
+    (while (< i (+ 1 (/ 168 2)))
+      ;(message "i=%d" i)
+      (if (= 0 (mod 168 i))
+          (progn
+            (setq j (/ 168 i))
+            (if (and (> i j)
+                     (= 0 (mod (+ i j) 2))
+                     (= 0 (mod (- i j) 2)))
+                (progn
+                  (setq m (/ (+ i j) 2))
+                  (setq n (/ (- i j) 2))
+                  (setq x (- (* n n) 100))
+                  (message "%d+100=%d*%d" x n n)
+                  (message "%d+268=%d*%d" x m m)))))
+      (setq i (1+ i)))))
+
+(test3)

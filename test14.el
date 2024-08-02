@@ -1,0 +1,16 @@
+(defun test14 ()
+  (let ((n 0)
+        (i 0))
+    (setq n (read-number "整数を入力してください:"))
+    (princ (concat (number-to-string n) "="))
+    (let ((i 2))
+      (while (<= i n)
+        (while (= 0 (mod n i))
+          (progn
+            (princ (concat (number-to-string i) ""))
+            (setq n (/ n i))
+            (if (/= n 1)
+                (princ "*"))))
+        (setq i (1+ i))))))
+
+(test14)

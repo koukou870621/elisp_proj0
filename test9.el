@@ -1,0 +1,17 @@
+(defun test9 ()
+  (let ((i 0)
+        (j 0)))
+  (message "=======================")
+  (let ((i 0))
+    (while (< i 8)
+      (let ((j 0))
+        (while (< j 8)
+          (if (= 0 (mod (+ i j) 2))
+              (progn
+                (princ "aa"))
+            (princ "  "))
+          (setq j (1+ j)))
+        (princ "\n"))
+      (setq i (1+ i)))))
+
+(test9)

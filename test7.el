@@ -1,0 +1,10 @@
+(defun test7 ()
+  (setq a 176)
+  (setq b 219)
+  (message "%c%c%c%c%c" b a a a b)
+  (message "%c%c%c%c%c" a b a b a)
+  (message "%c%c%c%c%c" a a b a a)
+  (message "%c%c%c%c%c" a b a b a)
+  (message "%c%c%c%c%c" b a a a b))
+
+(test7)

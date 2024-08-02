@@ -1,0 +1,17 @@
+(defun test24 ()
+  (let ((i 0)
+        (tt 0)
+        (sum 0.0)
+        (a 2.0)
+        (b 1.0))
+    (setq i 1)
+    (while (<= i 20)
+      (progn
+        (setq sum (+ sum (/ a b)))
+        (setq tt a)
+        (setq a (+ a b))
+        (setq b tt))
+      (setq i (1+ i)))
+    (message "%9.6f" sum)))
+
+(test24)

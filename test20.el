@@ -1,0 +1,15 @@
+(defun test20 ()
+  (let ((h 0.0)
+        (s 0.0))
+    (setq h 100.00000)
+    (setq s 100.00000)
+    (setq h (/ h 2))
+    (setq i 2)
+    (while (<= i 10)
+      (progn
+        (setq s (+ s (* 2 h)))
+        (setq h (/ h 2)))
+      (setq i (1+ i)))
+    (message "１０回目の着地時、合計%fメートルを通過し、１０回目のリバウンドの高さは%fメートルでした。" s h)))
+
+(test20)

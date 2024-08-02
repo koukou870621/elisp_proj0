@@ -1,0 +1,17 @@
+(defun test18 ()
+  (let ((s 0)
+        (a 0)
+        (n 0)
+        (tt 0))
+    (setq a (read-number "aを入力してください:"))
+    (setq n (read-number "nを入力してください:"))
+    (setq tt a)
+    (while (> n 0)
+      (progn
+        (setq s (+ s tt))
+        (setq a (* a 10))
+        (setq tt (+ tt a))
+        (setq n (1- n))))
+    (message "a+aa+...=%d\n" s)))
+
+(test18)

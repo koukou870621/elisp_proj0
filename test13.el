@@ -1,0 +1,16 @@
+(defun test13 ()
+  (let ((i 0)
+        (x 0)
+        (y 0)
+        (z 0))
+    (let ((i 100))
+      (while (< i 1000)
+        (progn
+          (setq x (mod i 10))
+          (setq y (mod (/ i 10) 10))
+          (setq z (mod (/ i 100) 10))
+          (if (= i (+ (* x x x) (* y y y) (* z z z)))
+              (princ (concat (number-to-string i) "\n"))))
+        (setq i (1+ i))))))
+
+(test13)

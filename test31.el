@@ -1,0 +1,32 @@
+(defun test31 ()
+  (let ((i 0)
+        (j 0))
+    (message "")
+    (setq i (read-char "i:"))
+    (cond
+     ((= i ?m)
+      (message "monday"))
+     ((= i ?w)
+      (message "wednesday"))
+     ((= i ?f)
+      (message "friday"))
+     ((= i ?t)
+      (progn
+        (message "次の文字を入力してください")
+        (setq j (read-char "j:"))
+        (if (= j ?u)
+            (message "tuesday"))
+        (if (= j ?h)
+            (message "thursday"))))
+     ((= i ?s)
+      (progn
+        (message "次の文字を入力してください")
+        (setq j (read-char "j:"))
+        (if (= j ?a)
+            (message "saturday"))
+        (if (= j ?u)
+            (message "sunday"))))
+     (t
+      (message "error")))))
+
+(test31)
